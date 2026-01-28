@@ -188,3 +188,4 @@ fabric.properties
 .idea
 .idea.backup/
 .idea.backup
+fixtures/
