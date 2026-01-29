@@ -47,7 +47,7 @@ class Product(models.Model):
     slug = models.CharField(max_length=50, unique=True, verbose_name='Слаг')
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='products', verbose_name='Категория')
     color = models.CharField(max_length=100, verbose_name='Цвет')
-    price = models.DecimalField(default=0, max_digits=10, decimal_places=2)
+    price = models.DecimalField(default=0, max_digits=10, decimal_places=2, verbose_name='Цена')
     description = models.TextField(max_length=500, blank=True, null=True)
     image = models.ImageField(upload_to='products/main/', verbose_name='Изображение')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
