@@ -1,3 +1,6 @@
+{% load static %}
+{% load my_tags %}
+
 {% block content %}
 <main class="mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <!-- Breadcrumb and Filters -->
@@ -32,15 +35,9 @@
              hx-target="#main-content"
              hx-push-url="true">
             <div class="aspect-square overflow-hidden bg-gray-100 mb-4">
-                {% if product.image %}
-                    <img src="{{ product.image.url }}"
+                    <img src="{{ product.image|product_media }}"
                          alt="{{ product.name }}" 
                          class="product-image w-full h-full object-cover">
-                {% else %}
-                    <div class="product-image w-full h-full bg-gray-200 flex items-center justify-center">
-                        <span class="text-gray-400 text-sm">No Image</span>
-                    </div>
-                {% endif %}
             </div>
             <div class="text-center">
                 <h3 class="text-sm font-medium text-gray-900 mb-1 uppercase">{{ product.name }}</h3>
