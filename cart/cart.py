@@ -79,7 +79,7 @@ class Cart:
                 'product': item['product'],
                 'quantity': item['quantity'],
                 'size': item['size'],
-                'price':Decimal(item['prise']),
+                'price':Decimal(item['price']),
                 'total_price': item['total_price'],
                 'cart_key': f'{item['product_id']}_{item['size']}'
             })
